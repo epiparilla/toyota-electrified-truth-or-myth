@@ -1,0 +1,9 @@
+{
+  "appId": "com.toyota.pevs.truthmyth",
+  "appName": "Toyota Electrified Truth or Myth",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

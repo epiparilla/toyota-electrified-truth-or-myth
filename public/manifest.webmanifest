@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "Toyota Electrified Truth or Myth",
+  "short_name": "Toyota Truth",
+  "description": "A Toyota electrified Truth or Myth challenge.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#080C14",
+  "theme_color": "#080C14",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/toyota-pevs-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

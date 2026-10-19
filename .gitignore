@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.wrangler/
+
+# Local Android tooling and signing materials
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/signing.properties
+android/*.jks
+
+# Published packages are release assets, not source files.
+release/

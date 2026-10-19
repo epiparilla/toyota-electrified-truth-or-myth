@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Toyota Electrified Challenge">
+  <rect width="512" height="512" rx="104" fill="#080C14"/>
+  <rect x="38" y="38" width="436" height="436" rx="78" fill="none" stroke="#EB0A1E" stroke-width="12"/>
+  <text x="256" y="218" text-anchor="middle" fill="#EB0A1E" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="700" letter-spacing="4">TOYOTA</text>
+  <path d="M126 251h260" stroke="#46525E" stroke-width="4"/>
+  <text x="256" y="333" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="800" letter-spacing="3">PEVS</text>
+  <text x="256" y="381" text-anchor="middle" fill="#00F0FF" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="2">ELECTRIFIED CHALLENGE</text>
+</svg>

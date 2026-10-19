@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Toyota Electrified Truth or Myth</string>
+    <string name="title_activity_main">Toyota Electrified Truth or Myth</string>
+    <string name="package_name">com.toyota.pevs.truthmyth</string>
+    <string name="custom_url_scheme">com.toyota.pevs.truthmyth</string>
+</resources>
