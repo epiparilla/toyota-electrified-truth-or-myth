@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#080c14" />
+    <title>Download | Toyota Electrified Truth or Myth</title>
+    <style>
+      @font-face { font-family: ToyotaType; src: url('/fonts/ToyotaType-Regular.ttf') format('truetype'); font-weight: 400; }
+      @font-face { font-family: ToyotaType; src: url('/fonts/ToyotaType-Bold.ttf') format('truetype'); font-weight: 700; }
+      * { box-sizing: border-box; }
+      body { min-height: 100vh; margin: 0; display: grid; place-items: center; overflow-x: hidden; color: #f6f8fb; background: #080c14 url('/bg.png') center / cover fixed no-repeat; font-family: ToyotaType, Arial, sans-serif; }
+      body::before { content: ''; position: fixed; inset: 0; background: linear-gradient(180deg, rgba(5, 12, 24, .72), rgba(4, 10, 19, .9)); pointer-events: none; }
+      main { position: relative; width: min(92vw, 660px); margin: 32px 0; padding: 42px 36px; border: 1px solid rgba(0, 229, 255, .55); border-radius: 24px; text-align: center; background: rgba(5, 15, 31, .84); box-shadow: 0 0 42px rgba(0, 225, 255, .17), inset 0 0 32px rgba(0, 229, 255, .04); }
+      img { width: 130px; max-width: 60%; margin-bottom: 32px; }
+      .eyebrow { margin: 0 0 10px; color: #00defc; font-size: .78rem; font-weight: 700; letter-spacing: .2em; }
+      h1 { margin: 0; font-size: clamp(2rem, 7vw, 3.25rem); line-height: 1.06; letter-spacing: .035em; text-transform: uppercase; }
+      h1 span { color: #ee1b24; }
+      p { max-width: 490px; margin: 23px auto; color: #c8d1df; line-height: 1.55; }
+      .download { display: inline-flex; align-items: center; justify-content: center; min-height: 58px; width: min(100%, 420px); margin: 11px 0 20px; padding: 12px 24px; border: 0; border-radius: 999px; color: #fff; background: linear-gradient(180deg, #ff3440, #e6000d); box-shadow: 0 8px 24px rgba(238, 27, 36, .34); font: inherit; font-weight: 700; font-size: 1rem; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+      .download:focus, .download:hover { outline: 2px solid #65efff; outline-offset: 4px; filter: brightness(1.08); }
+      .meta { margin: 0; color: #7e93ac; font-size: .82rem; }
+      .help { margin-top: 34px; padding-top: 25px; border-top: 1px solid rgba(0, 229, 255, .23); text-align: left; }
+      .help h2 { margin: 0 0 10px; color: #00defc; font-size: .9rem; letter-spacing: .12em; text-transform: uppercase; }
+      .help ol { margin: 0; padding-left: 22px; color: #c8d1df; font-size: .9rem; line-height: 1.7; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="/toyota-logo.png" alt="Toyota" />
+      <p class="eyebrow">TOYOTA ELECTRIFIED</p>
+      <h1>Truth <span>or</span> Myth</h1>
+      <p>Download the native Android kiosk app for Toyota Electrified Truth or Myth.</p>
+      <a class="download" href="https://github.com/epiparilla/toyota-electrified-truth-or-myth/releases/download/v1.0.0/Toyota-Electrified-Truth-or-Myth-v1.0.0.apk">Download Android APK</a>
+      <p class="meta">Version 1.0.0 &middot; 10.6 MB &middot; Android 7.0 or later</p>
+      <section class="help">
+        <h2>Install on Android</h2>
+        <ol>
+          <li>Download the APK on the Android device.</li>
+          <li>Open the downloaded file and allow installation when Android asks.</li>
+          <li>Open Toyota Electrified Truth or Myth from the device home screen.</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'toyota-electrified-challenge-v21';
+const CACHE_NAME = 'toyota-electrified-challenge-v22';
 
 self.addEventListener('install', () => {
   self.skipWaiting();
@@ -23,10 +23,10 @@ self.addEventListener('fetch', (event) => {
       fetch(request)
         .then((response) => {
           const copy = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put('/', copy));
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
           return response;
         })
-        .catch(() => caches.match('/'))
+        .catch(() => caches.match(request).then((cached) => cached || caches.match('/')))
     );
     return;
   }
