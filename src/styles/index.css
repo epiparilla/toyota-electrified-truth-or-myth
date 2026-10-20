@@ -1636,3 +1636,107 @@ html, body {
   0% { transform: translateX(0); }
   100% { transform: translateX(6px); }
 }
+
+/* Large physical touchscreen calibration. This section intentionally remains
+   last so the measured kiosk dimensions win over the phone-first base rules. */
+@media (min-width: 700px) and (orientation: portrait) {
+  html[data-kiosk-viewport='large-portrait'] {
+    font-size: var(--kiosk-rem);
+  }
+
+  html[data-kiosk-viewport='large-portrait'] #root {
+    min-height: 100dvh;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .kiosk-wrapper {
+    width: var(--kiosk-canvas-width);
+    height: var(--kiosk-canvas-height);
+    max-width: var(--kiosk-canvas-width);
+    max-height: var(--kiosk-canvas-height);
+    flex: none;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .kiosk-header {
+    padding-top: var(--header-top-clearance);
+    margin-bottom: 24px;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .brand-logo-image {
+    width: var(--kiosk-logo-size);
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .screen-container {
+    height: auto;
+    min-height: 0;
+    padding: var(--kiosk-content-padding);
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-welcome {
+    padding: 30px 64px var(--welcome-action-bottom-clearance);
+    gap: 38px;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-welcome .quiz-title {
+    font-size: 4rem;
+    letter-spacing: 3px;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-welcome .quiz-intro {
+    max-width: 780px;
+    margin: 16px auto 0;
+    font-size: 1.18rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-welcome-card {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 26px;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-start {
+    width: min(100%, var(--kiosk-button-width));
+    max-width: none;
+    min-height: 98px;
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-start svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-screen {
+    padding: var(--kiosk-content-padding);
+    gap: 22px;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .learning-scroll {
+    gap: 18px;
+    padding: 6px 6px 16px;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .learning-card {
+    padding: 24px 28px;
+    border-radius: 20px;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .learning-card p,
+  html[data-kiosk-viewport='large-portrait'] .challenge-card p {
+    margin: 14px 0;
+    font-size: 1.2rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .challenge-card {
+    min-height: 390px;
+    padding: 34px;
+    border-radius: 26px;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .truth-btn,
+  html[data-kiosk-viewport='large-portrait'] .myth-btn {
+    min-height: 112px;
+    font-size: 2.15rem;
+  }
+}
