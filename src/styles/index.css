@@ -85,6 +85,12 @@ html, body {
   overflow: hidden;
 }
 
+/* Use the full physical canvas on portrait touchscreen kiosks, while retaining
+   the compact centered preview on ordinary desktop screens. */
+@media (min-width: 700px) and (orientation: portrait) {
+  .kiosk-wrapper { max-width: none; }
+}
+
 /* Readability layer over the shared perspective-grid background. */
 .kiosk-wrapper::before {
   content: '';
