@@ -88,7 +88,143 @@ html, body {
 /* Use the full physical canvas on portrait touchscreen kiosks, while retaining
    the compact centered preview on ordinary desktop screens. */
 @media (min-width: 700px) and (orientation: portrait) {
+  :root {
+    --header-top-clearance: 72px;
+    --welcome-action-bottom-clearance: 96px;
+    font-size: clamp(19px, 2vw, 24px);
+  }
+
   .kiosk-wrapper { max-width: none; }
+
+  .kiosk-header {
+    margin-bottom: 26px;
+  }
+
+  .brand-row {
+    padding-bottom: 12px;
+  }
+
+  .brand-logo-image {
+    width: 174px;
+  }
+
+  /* Let the available kiosk height define the content area instead of
+     compressing it against the fixed brand header. */
+  .screen-container {
+    height: auto;
+    min-height: 0;
+    padding: 28px 48px;
+  }
+
+  .quiz-welcome {
+    padding: 30px 64px var(--welcome-action-bottom-clearance);
+    gap: 38px;
+  }
+
+  .quiz-welcome .quiz-title {
+    font-size: 4rem;
+    letter-spacing: 3px;
+  }
+
+  .quiz-welcome .quiz-intro {
+    max-width: 780px;
+    margin: 16px auto 0;
+    font-size: 1.18rem;
+  }
+
+  .quiz-welcome-card {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 26px;
+  }
+
+  .quiz-card-label,
+  .settings-section-title {
+    font-size: 0.95rem;
+  }
+
+  .quiz-steps {
+    margin: 22px 0;
+    font-size: 1.7rem;
+  }
+
+  .quiz-welcome-card p {
+    font-size: 1.08rem;
+  }
+
+  .quiz-start {
+    width: min(100%, 650px);
+    max-width: none;
+    min-height: 98px;
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .quiz-start svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .quiz-screen {
+    padding: 28px 48px;
+    gap: 22px;
+  }
+
+  .quiz-topbar span,
+  .learning-card-meta {
+    font-size: 0.92rem;
+  }
+
+  .quiz-topbar strong {
+    font-size: 1.35rem;
+  }
+
+  .quiz-timer {
+    padding: 14px 20px;
+    font-size: 1.28rem;
+  }
+
+  .learning-scroll {
+    gap: 18px;
+    padding: 6px 6px 16px;
+  }
+
+  .learning-card {
+    padding: 24px 28px;
+    border-radius: 20px;
+  }
+
+  .learning-card p,
+  .challenge-card p {
+    margin: 14px 0;
+    font-size: 1.2rem;
+  }
+
+  .learning-reveal,
+  .learning-hint {
+    font-size: 1rem;
+  }
+
+  .learning-answer strong {
+    font-size: 1.6rem;
+  }
+
+  .learning-answer span {
+    font-size: 1rem;
+  }
+
+  .challenge-card {
+    min-height: 390px;
+    padding: 34px;
+    border-radius: 26px;
+  }
+
+  .truth-btn,
+  .myth-btn {
+    min-height: 112px;
+    font-size: 2.15rem;
+  }
 }
 
 /* Readability layer over the shared perspective-grid background. */

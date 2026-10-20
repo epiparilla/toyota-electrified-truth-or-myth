@@ -1,4 +1,4 @@
-const CACHE_NAME = 'toyota-electrified-challenge-v23';
+const CACHE_NAME = 'toyota-electrified-challenge-v24';
 
 self.addEventListener('install', () => {
   self.skipWaiting();
