@@ -70,7 +70,7 @@ export default function WinScreen({
   const progressPercent = Math.max(0, Math.min(100, (timeLeft / autoResetDuration) * 100));
 
   return (
-    <div className="screen-container">
+    <div className="screen-container result-screen">
       <div className="result-screen-content">
         {/* GLOWING VICTORY BADGE */}
         <div className="result-badge-icon win">

@@ -15,22 +15,27 @@ export function useKioskViewport() {
 
       if (!isLargePortrait) {
         delete root.dataset.kioskViewport;
-        ['--kiosk-canvas-width', '--kiosk-canvas-height', '--kiosk-rem', '--kiosk-content-padding', '--kiosk-logo-size', '--header-top-clearance', '--welcome-action-bottom-clearance', '--kiosk-button-width'].forEach((property) => root.style.removeProperty(property));
+        ['--kiosk-canvas-width', '--kiosk-canvas-height', '--kiosk-rem', '--kiosk-content-padding', '--kiosk-logo-size', '--header-top-clearance', '--welcome-action-bottom-clearance', '--kiosk-button-width', '--kiosk-button-height', '--kiosk-result-badge-size', '--kiosk-result-icon-size'].forEach((property) => root.style.removeProperty(property));
         return;
       }
 
       const canvasWidth = Math.round(Math.min(width, height * PORTRAIT_RATIO));
-      const scale = Math.min(Math.max(canvasWidth / 520, 1), 1.5);
+      // The phone captures are the visual reference. Scale from the measured
+      // canvas rather than keeping the old small-device cap on a 55-inch kiosk.
+      const scale = Math.max(canvasWidth / 520, 1);
 
       root.dataset.kioskViewport = 'large-portrait';
       root.style.setProperty('--kiosk-canvas-width', `${canvasWidth}px`);
       root.style.setProperty('--kiosk-canvas-height', `${height}px`);
       root.style.setProperty('--kiosk-rem', `${Math.round(16 * scale)}px`);
-      root.style.setProperty('--kiosk-content-padding', `${Math.round(24 * scale)}px`);
-      root.style.setProperty('--kiosk-logo-size', `${Math.round(104 * scale)}px`);
-      root.style.setProperty('--header-top-clearance', `${Math.round(30 * scale)}px`);
-      root.style.setProperty('--welcome-action-bottom-clearance', `${Math.round(48 * scale)}px`);
-      root.style.setProperty('--kiosk-button-width', `${Math.round(Math.min(canvasWidth * 0.62, 650))}px`);
+      root.style.setProperty('--kiosk-content-padding', `${Math.round(canvasWidth * 0.055)}px`);
+      root.style.setProperty('--kiosk-logo-size', `${Math.round(canvasWidth * 0.3)}px`);
+      root.style.setProperty('--header-top-clearance', `${Math.round(height * 0.035)}px`);
+      root.style.setProperty('--welcome-action-bottom-clearance', `${Math.round(height * 0.04)}px`);
+      root.style.setProperty('--kiosk-button-width', `${Math.round(canvasWidth * 0.88)}px`);
+      root.style.setProperty('--kiosk-button-height', `${Math.round(canvasWidth * 0.125)}px`);
+      root.style.setProperty('--kiosk-result-badge-size', `${Math.round(canvasWidth * 0.14)}px`);
+      root.style.setProperty('--kiosk-result-icon-size', `${Math.round(canvasWidth * 0.085)}px`);
     };
 
     updateViewport();

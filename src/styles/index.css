@@ -1739,4 +1739,94 @@ html, body {
     min-height: 112px;
     font-size: 2.15rem;
   }
+
+  /* 55-inch kiosk proportions, measured from the approved phone captures. */
+  html[data-kiosk-viewport='large-portrait'] .kiosk-header {
+    margin-bottom: 1.2rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-welcome {
+    padding: 0 var(--kiosk-content-padding) var(--welcome-action-bottom-clearance);
+    gap: 0;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-welcome .quiz-title {
+    font-size: 3.45rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-welcome .quiz-intro {
+    max-width: 88%;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-welcome-card {
+    width: 100%;
+    max-width: none;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-steps {
+    margin: 0.7rem 0;
+    font-size: 1.55rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-welcome-card p {
+    font-size: 0.95rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-start,
+  html[data-kiosk-viewport='large-portrait'] .result-screen .btn-toyota-red {
+    width: min(100%, var(--kiosk-button-width));
+    min-height: var(--kiosk-button-height);
+    font-size: 2.15rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-start svg,
+  html[data-kiosk-viewport='large-portrait'] .result-screen .btn-toyota-red svg {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .quiz-screen {
+    padding: var(--kiosk-content-padding);
+    gap: 1rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .result-screen {
+    padding-bottom: var(--welcome-action-bottom-clearance);
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .result-badge-icon {
+    width: var(--kiosk-result-badge-size);
+    height: var(--kiosk-result-badge-size);
+    margin-bottom: 0.4rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .result-badge-icon svg {
+    width: var(--kiosk-result-icon-size);
+    height: var(--kiosk-result-icon-size);
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .result-screen-content {
+    gap: 1.1rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .result-headline {
+    font-size: 3.35rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .result-subtext {
+    max-width: 72%;
+    font-size: 1.08rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .stats-card {
+    padding: 0.65rem 1.15rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .screensaver-brand-logo {
+    width: var(--kiosk-logo-size);
+  }
 }

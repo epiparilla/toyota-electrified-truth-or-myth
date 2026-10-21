@@ -33,7 +33,7 @@ export default function LoseScreen({
   const progressPercent = Math.max(0, Math.min(100, (timeLeft / autoResetDuration) * 100));
 
   return (
-    <div className="screen-container">
+    <div className="screen-container result-screen">
       <div className="result-screen-content">
         {/* RED WARNING BADGE */}
         <div className="result-badge-icon lose">
