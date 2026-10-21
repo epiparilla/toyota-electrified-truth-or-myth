@@ -1722,7 +1722,11 @@ html, body {
     border-radius: 20px;
   }
 
-  html[data-kiosk-viewport='large-portrait'] .learning-card p,
+  html[data-kiosk-viewport='large-portrait'] .learning-card p {
+    margin: 14px 0;
+    font-size: 0.96rem;
+  }
+
   html[data-kiosk-viewport='large-portrait'] .challenge-card p {
     margin: 14px 0;
     font-size: 1.2rem;
@@ -1751,7 +1755,7 @@ html, body {
   }
 
   html[data-kiosk-viewport='large-portrait'] .quiz-welcome .quiz-title {
-    font-size: 3.45rem;
+    font-size: 2.8rem;
   }
 
   html[data-kiosk-viewport='large-portrait'] .quiz-welcome .quiz-intro {
@@ -1794,6 +1798,11 @@ html, body {
     gap: 1rem;
   }
 
+  html[data-kiosk-viewport='large-portrait'] .challenge-screen {
+    justify-content: flex-start;
+    padding-top: 2.4rem;
+  }
+
   html[data-kiosk-viewport='large-portrait'] .result-screen {
     padding-bottom: var(--welcome-action-bottom-clearance);
   }
@@ -1814,7 +1823,7 @@ html, body {
   }
 
   html[data-kiosk-viewport='large-portrait'] .result-headline {
-    font-size: 3.35rem;
+    font-size: 2.9rem;
   }
 
   html[data-kiosk-viewport='large-portrait'] .result-subtext {
@@ -1828,5 +1837,26 @@ html, body {
 
   html[data-kiosk-viewport='large-portrait'] .screensaver-brand-logo {
     width: var(--kiosk-logo-size);
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .screensaver-content-wrap {
+    width: 88%;
+    max-width: none;
+    gap: 1rem;
+    transform: translateY(-8%);
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .screensaver-electrified-title {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .screensaver-showcase-frame {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .screensaver-prompt-bar {
+    bottom: var(--welcome-action-bottom-clearance);
   }
 }

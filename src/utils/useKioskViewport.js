@@ -34,8 +34,8 @@ export function useKioskViewport() {
       root.style.setProperty('--welcome-action-bottom-clearance', `${Math.round(height * 0.04)}px`);
       root.style.setProperty('--kiosk-button-width', `${Math.round(canvasWidth * 0.88)}px`);
       root.style.setProperty('--kiosk-button-height', `${Math.round(canvasWidth * 0.125)}px`);
-      root.style.setProperty('--kiosk-result-badge-size', `${Math.round(canvasWidth * 0.14)}px`);
-      root.style.setProperty('--kiosk-result-icon-size', `${Math.round(canvasWidth * 0.085)}px`);
+      root.style.setProperty('--kiosk-result-badge-size', `${Math.round(canvasWidth * 0.21)}px`);
+      root.style.setProperty('--kiosk-result-icon-size', `${Math.round(canvasWidth * 0.128)}px`);
     };
 
     updateViewport();
