@@ -1859,4 +1859,116 @@ html, body {
   html[data-kiosk-viewport='large-portrait'] .screensaver-prompt-bar {
     bottom: var(--welcome-action-bottom-clearance);
   }
+
+  /* Keep technician controls proportional to the approved phone layout. */
+  html[data-kiosk-viewport='large-portrait'] .tech-icon-btn--audio,
+  html[data-kiosk-viewport='large-portrait'] .tech-icon-btn--settings {
+    width: var(--kiosk-facilitator-control-size);
+    height: var(--kiosk-facilitator-control-size);
+    bottom: max(var(--kiosk-facilitator-bottom-offset), env(safe-area-inset-bottom));
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .tech-icon-btn--audio {
+    left: var(--kiosk-facilitator-edge);
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .tech-icon-btn--settings {
+    right: var(--kiosk-facilitator-edge);
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .tech-icon-btn--audio svg,
+  html[data-kiosk-viewport='large-portrait'] .tech-icon-btn--settings svg {
+    width: var(--kiosk-facilitator-icon-size);
+    height: var(--kiosk-facilitator-icon-size);
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .modal-overlay {
+    padding: var(--kiosk-settings-block-edge) var(--kiosk-settings-inline-edge);
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .settings-card {
+    padding: var(--kiosk-settings-card-padding);
+    gap: 1rem;
+    border-radius: 1.75rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .settings-title-row {
+    padding-bottom: 1rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .settings-title {
+    max-width: 15rem;
+    font-size: 1.3rem;
+    line-height: 1.15;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .settings-title-row .tech-icon-btn {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .settings-title-row .tech-icon-btn svg,
+  html[data-kiosk-viewport='large-portrait'] .settings-section-title svg,
+  html[data-kiosk-viewport='large-portrait'] .playlist-actions svg,
+  html[data-kiosk-viewport='large-portrait'] .settings-footer svg {
+    width: 0.95rem;
+    height: 0.95rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .settings-section-title {
+    font-size: 0.8rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .setting-row {
+    gap: 0.55rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .setting-slider {
+    height: 0.35rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .setting-slider::-webkit-slider-thumb {
+    width: 1.05rem;
+    height: 1.05rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .toggle-switch {
+    width: 3.45rem;
+    height: 1.8rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .toggle-knob {
+    top: 0.125rem;
+    left: 0.18rem;
+    width: 1.55rem;
+    height: 1.55rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .toggle-switch.active .toggle-knob {
+    transform: translateX(1.55rem);
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .playlist-actions,
+  html[data-kiosk-viewport='large-portrait'] .settings-footer {
+    gap: 0.7rem;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .playlist-actions .btn-secondary {
+    min-height: 2.6rem;
+    padding: 0.45rem 1rem !important;
+    font-size: 0.72rem !important;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .settings-footer {
+    margin-top: 0.5rem !important;
+    flex-wrap: nowrap;
+  }
+
+  html[data-kiosk-viewport='large-portrait'] .settings-footer .btn-secondary,
+  html[data-kiosk-viewport='large-portrait'] .settings-footer .btn-toyota-red {
+    flex: 1;
+    min-height: 3.35rem;
+    padding: 0.55rem 1rem !important;
+    font-size: 0.75rem !important;
+  }
 }

@@ -15,7 +15,7 @@ export function useKioskViewport() {
 
       if (!isLargePortrait) {
         delete root.dataset.kioskViewport;
-        ['--kiosk-canvas-width', '--kiosk-canvas-height', '--kiosk-rem', '--kiosk-content-padding', '--kiosk-logo-size', '--header-top-clearance', '--welcome-action-bottom-clearance', '--kiosk-button-width', '--kiosk-button-height', '--kiosk-result-badge-size', '--kiosk-result-icon-size'].forEach((property) => root.style.removeProperty(property));
+        ['--kiosk-canvas-width', '--kiosk-canvas-height', '--kiosk-rem', '--kiosk-content-padding', '--kiosk-logo-size', '--header-top-clearance', '--welcome-action-bottom-clearance', '--kiosk-button-width', '--kiosk-button-height', '--kiosk-result-badge-size', '--kiosk-result-icon-size', '--kiosk-facilitator-control-size', '--kiosk-facilitator-icon-size', '--kiosk-facilitator-edge', '--kiosk-facilitator-bottom-offset', '--kiosk-settings-inline-edge', '--kiosk-settings-block-edge', '--kiosk-settings-card-padding'].forEach((property) => root.style.removeProperty(property));
         return;
       }
 
@@ -36,6 +36,13 @@ export function useKioskViewport() {
       root.style.setProperty('--kiosk-button-height', `${Math.round(canvasWidth * 0.125)}px`);
       root.style.setProperty('--kiosk-result-badge-size', `${Math.round(canvasWidth * 0.21)}px`);
       root.style.setProperty('--kiosk-result-icon-size', `${Math.round(canvasWidth * 0.128)}px`);
+      root.style.setProperty('--kiosk-facilitator-control-size', `${Math.round(canvasWidth * 0.083)}px`);
+      root.style.setProperty('--kiosk-facilitator-icon-size', `${Math.round(canvasWidth * 0.042)}px`);
+      root.style.setProperty('--kiosk-facilitator-edge', `${Math.round(canvasWidth * 0.042)}px`);
+      root.style.setProperty('--kiosk-facilitator-bottom-offset', `${Math.round(height * 0.04)}px`);
+      root.style.setProperty('--kiosk-settings-inline-edge', `${Math.round(canvasWidth * 0.054)}px`);
+      root.style.setProperty('--kiosk-settings-block-edge', `${Math.round(height * 0.02)}px`);
+      root.style.setProperty('--kiosk-settings-card-padding', `${Math.round(canvasWidth * 0.054)}px`);
     };
 
     updateViewport();
